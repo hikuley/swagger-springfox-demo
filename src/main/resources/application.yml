@@ -1,0 +1,12 @@
+info:
+    app:
+        desc: API reference
+        name: sample-service
+logging:
+    level:
+        org:
+            springframework:
+                security: DEBUG
+server:
+    contextPath: /api
+    use-forward-headers: true

@@ -1,0 +1,61 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "StockApp",
+        "description": "Stok takibi ve üretim bandı."
+    },
+    "host": "localhost:8080",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/user/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "type": "integer",
+                    "default": 11
+                }
+            ],
+            "get": {
+                "operationId": "GET_user-id",
+                "summary": "Get User",
+                "tags": [
+                    "UserAPI"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/userDto"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "userDto": {
+            "title": "UserDto",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "number": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
